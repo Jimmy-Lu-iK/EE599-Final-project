@@ -30,13 +30,13 @@ std::vector<int> CPPLib::Flatten2DVector(const std::vector<std::vector<int>> &in
 	   return b;
     }
   else{
-       for(int i=0; i<inputs.size();i++){
+       for(int i=0; i<inputs.size(); i++){
 	       for(int j=0;j<inputs[i].size();j++){
                res.push_back(inputs[i][j]);
 	        }
         }
    //for(int k=0; k<res.size(); ++k){
-   //std::cout << res[k] << ' ';
+   //std::cout << res[k] << ' ';}
    return res;
     }
  } 
