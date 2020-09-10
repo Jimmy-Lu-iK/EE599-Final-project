@@ -28,6 +28,14 @@ int FindMax(std::vector<int> &inputs) {
 ```
 
 Answer:
+1. When the inputs.size == 0;
+It is meaningless. The function will return -1 to show no inputs (unsuccessful).
+
+2. When the inputs.size !=0;
+Assuming that the value that the FindMax function finds is not the maximum value. However, if the result finally is still INT32_MIN, all items in inputs should be INT32_MIN. In this case, INT32_MIN is the maximun value, so our assuming is wrong.
+If the value of result finally is x, since x is not the maximum value in our assuming, the final result should be the maximum value when n == the maximum value. This is contradictory. For this reason, our assuming is wrong.
+
+All in all, we prove that the FindMax function always finds the maximum value in the input vector.
 
 ## Question 2 (20 Points. Medium)
 
@@ -45,7 +53,13 @@ int Example1(int n) {
 }
 ```
 
-Answer:
+Answer: O(n)
+Think about how many times count++ will run.
+When i = n, it will run n times.
+When i = n/2, it will run n/2 times.
+When i = n/4, it will run n/4 times and so on.
+Total number of times count++ will run is n + n/2 + n/4 +...+ 1 = 2*n. So the time complexity will be O(n).
+
 
 ```cpp
 void Example2(int a = 0, int n) {
@@ -57,7 +71,8 @@ void Example2(int a = 0, int n) {
 }
 ```
 
-Answer:
+Answer: O(logn)
+i could be n, n/2, n/4, n/8 ... 1. It means that i is n*(1/2)^k. When n*(1/2)^k = 1; k = logn. So a += i will run logn times, the time complexity will be O(logn). 
 
 ```cpp
 void Example3(int n) {
@@ -72,8 +87,10 @@ void Example3(int n) {
 }
 ```
 
-Answer:
-
+Answer: O(n*(log2)^2)
+For the third loop, count++ will run logn times (just like the upper question).
+For the second loop, it will also run logn times for itself. And since the third loop doesn't need to use j, so everytime j++, the third one will run logn times. In this case, count++ of the seond and the third ones will run (logn)^2 times.
+For the first loop, it will run n/2 + 1. And other loops also don't depend on i, so total number of times count++ will run is n*(log2)^2.
 ```cpp
 void Example4(int n) {
    int count = 0;
@@ -87,8 +104,11 @@ void Example4(int n) {
 }
 ```
 
-Answer:
-
+Answer: O(n^4)
+When we only think about the second loop, it will run i^2-i times.
+For the third loop, when j = i, 2*i, 3*i, 4*i,..., (i-1)*i,  cout<<"*" will run i, 2*i, 3*i, 4*i,..., (i-1)*i times.
+So for the second and the third loops, it will run i^2-i + i + 2*i + 3*i + ... + (i-1)*i = (i^3)/2 + 2*i^2 - i.
+When we only think about the first loop, it will run n times. For all loops, we need the summation of i^3. So the time complexity will be O(n^4).
 ## Question 3 (10 Points. Easy)
 
 What does it mean when we say that the Merge Sort (MS) algorithm is asymptotically more efficient than the Bubble Sort (BS) algorithm? Support your choice with an explanation.
@@ -98,7 +118,8 @@ What does it mean when we say that the Merge Sort (MS) algorithm is asymptotical
 3. BS will always be a better choice for small inputs
 4. MS will always be a better choice for all inputs
 
-Answer:
+Answer: 2.
+For this question, we only think the worst case. The worst case of BS is O(n^2), but the worst case of MS is O(n*logn). So when the inputs are larger, the gap between n and logn will be larger. So for large inputs, MS always will be a bettery choice.
 
 ## Question 4 (10 Points. Easy)
 
@@ -106,9 +127,9 @@ Create an account on GitHub and Stack Overflow and paste the link to your profil
 
 Answer:
 
-GitHub profile link:
+GitHub profile link: https://github.com/Jimmy-Lu-iK
 
-Stack Overflow profile link:
+Stack Overflow profile link: https://stackoverflow.com/users/14173055/jimmy-lu?tab=profile
 
 ## Question 5 (15 Points. Easy)
 

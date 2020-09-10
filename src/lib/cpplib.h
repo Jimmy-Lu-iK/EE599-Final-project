@@ -16,7 +16,7 @@ class CPPLib {
   std::string PrintIntro();
   
   // Calculate the factorial number
-  double CalFactorial(int N);
+  long int CalFactorial(int N);
   
   // // Flatten a 2D vector
   std::vector<int> Flatten2DVector(const std::vector<std::vector<int>>&input);
