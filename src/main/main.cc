@@ -29,6 +29,7 @@ int main() {
   cout << "Q7 Answer:" << endl;
   
   cout << "5! = "; 
+  
   std::cout << s.CalFactorial(5) << std::endl;
 
   //std::cout << s.Flatten2DVector({{1,2,3},{4,5},{7,8}}) << std::endl;

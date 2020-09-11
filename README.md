@@ -112,6 +112,7 @@ When we only think about the second loop, it will run i^2-i times.
 For the third loop, when j = i, 2*i, 3*i, 4*i,..., (i-1)*i,  cout<<"*" will run i, 2*i, 3*i, 4*i,..., (i-1)*i times.
 So for the second and the third loops, it will run i^2-i + i + 2*i + 3*i + ... + (i-1)*i = (i^3)/2 + 2*i^2 - i.
 When we only think about the first loop, it will run n times. For all loops, we need the summation of i^3. So the time complexity will be O(n^4).
+
 ## Question 3 (10 Points. Easy)
 
 What does it mean when we say that the Merge Sort (MS) algorithm is asymptotically more efficient than the Bubble Sort (BS) algorithm? Support your choice with an explanation.
