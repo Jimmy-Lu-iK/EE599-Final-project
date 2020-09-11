@@ -7,8 +7,8 @@
 
 // Add your own tests in this file
 TEST(Q5_Student, ReturnIntro) {
-  CPPLib CPPLib;
-  std::string actual = cpplib..PrintIntro();
+  CPPLib cpplib;
+  std::string actual = cpplib.PrintIntro();
   std::string expected = "****SelfIntroduction****\n"
            "name: Jinming Lu\n"
            "email: jinmingl@usc.edu\n"

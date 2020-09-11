@@ -10,7 +10,7 @@
  */
 class CPPLib {
  public:
-  std::string PrintHelloWorld();
+  //std::string PrintHelloWorld();
 
   // Print your self-introduction
   std::string PrintIntro();
@@ -18,7 +18,7 @@ class CPPLib {
   // Calculate the factorial number
   long int CalFactorial(int N);
   
-  // // Flatten a 2D vector
+ // Flatten a 2D vector
   std::vector<int> Flatten2DVector(const std::vector<std::vector<int>>&input);
   private : 
 };

@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std;
-std::string CPPLib::PrintHelloWorld() { return "**** Hello World ****"; }
+//std::string CPPLib::PrintHelloWorld() { return "**** Hello World ****"; }
 
 // Question 5 Print your self-introduction
 std::string CPPLib::PrintIntro() {
