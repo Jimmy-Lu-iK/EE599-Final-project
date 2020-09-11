@@ -74,6 +74,7 @@ void Example2(int a = 0, int n) {
 Answer: O(logn)
 i could be n, n/2, n/4, n/8 ... 1. It means that i is n*(1/2)^k. When n*(1/2)^k = 1; k = logn. So a += i will run logn times, the time complexity will be O(logn). 
 
+
 ```cpp
 void Example3(int n) {
    int count = 0;
@@ -91,6 +92,8 @@ Answer: O(n*(log2)^2)
 For the third loop, count++ will run logn times (just like the upper question).
 For the second loop, it will also run logn times for itself. And since the third loop doesn't need to use j, so everytime j++, the third one will run logn times. In this case, count++ of the seond and the third ones will run (logn)^2 times.
 For the first loop, it will run n/2 + 1. And other loops also don't depend on i, so total number of times count++ will run is n*(log2)^2.
+
+
 ```cpp
 void Example4(int n) {
    int count = 0;
@@ -119,7 +122,7 @@ What does it mean when we say that the Merge Sort (MS) algorithm is asymptotical
 4. MS will always be a better choice for all inputs
 
 Answer: 2.
-For this question, we only think the worst case. The worst case of BS is O(n^2), but the worst case of MS is O(n*logn). So when the inputs are larger, the gap between n and logn will be larger. So for large inputs, MS always will be a bettery choice.
+For this question, we only think the worst case. The worst case of BS is O(n^2), but the worst case of MS is O(n*logn). So when the inputs are larger, the gap between n and logn will be larger and logn is smaller that n for larger inputs. So for large inputs, MS always will be a bettery choice.
 
 ## Question 4 (10 Points. Easy)
 

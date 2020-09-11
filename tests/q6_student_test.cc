@@ -41,8 +41,14 @@ TEST(Q6_Student, Flatten2DVector) {
   out = cpplib.Flatten2DVector({{1,2,3},{4,5},{6,7,8}});
   expected = {1,2,3,4,5,6,7,8};
   EXPECT_EQ(expected, out);
-  
 
+// Sort array of 3 elements and one empty element
+//in ={{1,2,3},{4,5},{},{6,7,8}};
+  out = cpplib.Flatten2DVector({{1,2,3},{4,5},{},{6,7,8}});
+  expected = {1,2,3,4,5,6,7,8};
+  EXPECT_EQ(expected, out);
+
+  
   /*CPPLib cpplib;
   EXPECT_EQ({}, cpplib.Flatten2DVector({{}});
   EXPECT_EQ({1}, cpplib.Flatten2DVector({{1}});
