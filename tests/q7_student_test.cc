@@ -9,7 +9,7 @@
 TEST(Q7_Student, CalFactorial) {
 CPPLib cpplib;
 
-// Negtive Check:
+// Negative Check:
   EXPECT_EQ(-1, cpplib.CalFactorial(-5));
 
 // Zero Check:
