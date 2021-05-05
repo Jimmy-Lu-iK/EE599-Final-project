@@ -11,7 +11,8 @@
 class CPPLib {
  public:
   //std::string PrintHelloWorld();
-
+  std::string FinalProject();
+  
   // Print your self-introduction
   std::string PrintIntro();
   

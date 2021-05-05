@@ -2,9 +2,14 @@
 #include "limits"
 #include <iostream>
 #include <vector>
+#define MAXLINE 81
 
 using namespace std;
 //std::string CPPLib::PrintHelloWorld() { return "**** Hello World ****"; }
+
+//std::string CPPLib::FinalProject() {
+//}
+
 
 // Question 5 Print your self-introduction
 std::string CPPLib::PrintIntro() {
