@@ -41,11 +41,11 @@ int main() {
 
   PathNum = 4;
   MaxPoolPath = 4;
-  LUTresource = 4000000;
-  PEusageLUT = 2200;
-  PEusgaeDSP = 10;
-  PoolusageLUT = 500;
-  DSPresource = 1000;
+  LUTresource = 20000;
+  PEusageLUT = 300;
+  PEusgaeDSP = 4;
+  PoolusageLUT = 100;
+  DSPresource = 50000;
   InputFeatureMapHeight = 28;
   InputFeatureMapWidth = 28;
   InputFeatureMapDepth = 192;
